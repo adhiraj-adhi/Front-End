@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE HIT SF</title>
+    <!-- CDN For Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- end of CDN For Swiper.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <img src="svg/logo.svg" alt="logo" />
+            <span> IETE HIT SF </span>
+        </div>
+
+        <div class="hamburger"> <i class="fas fa-bars" style="color: aliceblue;"></i> </div>
+        <nav>
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> About </a> </li>
+                <li> <a href="#"> Events </a> </li>
+                <li> <a href="#"> Contact </a> </li>
+                <li> <a href="#"> Login </a> </li>
+            </ul>
+            <div class="closeNav" style="display: none;"> <i class="fas fa-times" style="color: rgba(255, 255, 255, 1);"></i> </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="robot">
+            <img src="svg/circle.svg" alt="robo" class="circle1" />
+            <img src="svg/robot.svg" alt="robo" class="robot__svg" />
+        </div>
+        <div class="content">
+            <img src="svg/circle.svg" alt="robo" class="circle5" />
+            <!-- <img src="svg/arrow3.svg" alt="arrow" class="arrow1" /> -->
+            <h1> IETE HIT SF </h1>
+            <p> Welcome to our site! Stay ahead of the curve with the updates and insights of cutting-edge technology .
+                Join us on our journey to explore the future of technology and be a part of “ IETE HIT SF Family ”. </p>
+            <!-- <img src="svg/arrow4.svg" alt="arrow" class="arrow2" /> -->
+            <img src="svg/arrow2.svg" alt="arrow" class="arrow2" />
+            <button class="enrollBtn" onclick="enroll()"> Enroll </button>
+            <button class="closeSwiper" onclick="closeEvents()" style="display: none;"> Back </button>
+        </div>
+
+
+        <img src="svg/circle.svg" alt="robo" class="circle2" />
+        <img src="svg/circle.svg" alt="robo" class="circle3" />
+        <img src="svg/circle.svg" alt="robo" class="circle4" />
+        <!-- <img src="svg/sideone.svg" alt="design" class="sideone1" />
+        <img src="svg/sideone.svg" alt="design" class="sideone2" /> -->
+
+
+
+        <!-- =================  code for image swiper  ============================= -->
+
+        <div class="swiper mySwiper" id="unhide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/13955179/pexels-photo-13955179.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/14655382/pexels-photo-14655382.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/14933181/pexels-photo-14933181.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/15045106/pexels-photo-15045106.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/14604771/pexels-photo-14604771.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.pexels.com/photos/15146989/pexels-photo-15146989.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" />
+                </div>\
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <!-- =================  code for image swiper ends here  ============================= -->
+    </main>
+
+
+
+    <!-- ========================== code for small devices goes here ==================================== -->
+
+    <div class="smain">
+        <div class="sroboAndName">
+            <div class="srobot">
+                <img src="svg/circle.svg" alt="robo" class="scircle1" />
+                <img src="svg/robot.svg" alt="robo" class="srobot__svg" />
+            </div>
+            <div class="sname">
+                <h1 class="iete"> IETE HIT SF </h1>
+            </div>
+        </div>
+        <div class="scontent">
+            <p>
+                Welcome to our site! Stay ahead of the curve with the updates and insights of cutting-edge technology .
+                Join us on our journey to explore the future of technology and be a part of “ IETE HIT SF Family ”.
+            </p>
+
+            <button class="senroll"> Enroll </button>
+        </div>
+    </div>
+
+    <!-- CDN For Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- CDN For Swiper.js -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 5,
+            spaceBetween: 70,
+            slidesPerGroup: 1,  // to specify kitna slides ek bar me move hoga 
+            centeredSlides: true,
+            grabCursor: true,
+
+
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                color: "white",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                // when window width is <= 499px
+                300: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    spaceBetweenSlides: 10
+                },
+                650: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                },
+                // when window width is <= 999px
+                999: {
+                    slidesPerView: 5,
+                    centeredSlides: true,
+                    // spaceBetweenSlides: 50
+                }
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

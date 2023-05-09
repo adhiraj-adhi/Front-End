@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400&family=Oxygen+Mono&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-anchor: none;
+    list-style: none;
+    text-decoration: none;
+
+    /* background: #131010;
+    background: #1A1313; */
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s all;
+}
+
+.smain{
+    display: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    padding: 0.4rem 0rem;
+    align-items: center;
+    justify-content: space-between;
+    background: #131010;
+    color: rgba(255, 255, 255, 1);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logoContainer {
+    width: 20%;
+    padding: 0.65rem;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+
+
+    border-radius: 0 30px 30px 0;
+    background: #1A1313;
+    box-shadow: 0px 4px 4px rgba(226, 226, 226, 0.1);
+    /* border: 1px solid red; */
+}
+
+header .logoContainer img {
+    width: 10%;
+    margin-right: 1rem;
+}
+
+
+
+header .hamburger {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    display: none;
+}
+
+header nav {
+    width: 55%;
+    padding: 0.65rem;
+
+
+    border-radius: 30px 0px 0px 30px;
+    background: #1A1313;
+    box-shadow: 0px 4px 4px rgba(226, 226, 226, 0.1);
+    /* border: 1px solid red; */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+header nav ul li a {
+    color: rgba(255, 255, 255, 1);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+    position: relative;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    background: #131010;
+}
+
+
+main .robot {
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+    /* background: blueviolet; */
+}
+
+main .robot .circle1 {
+    width: 77%;
+}
+
+main .robot .robot__svg {
+    width: 82%;
+    transform: translate(-10rem, 1rem);
+}
+
+main .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    position: relative;
+
+    z-index: 5;
+
+    /* background-color: antiquewhite; */
+}
+
+main .content .circle5 {
+    width: 2.75rem;
+    position: absolute;
+    left: -3%;
+    top: -18.5%;
+}
+
+.content h1 {
+    width: fit-content;
+    font-size: 4rem;
+    /* color: rgba(0, 0, 0, 1); */
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+.content p {
+    font-size: 0.9rem;
+    /* color: rgba(0, 0, 0, 1); */
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 1rem;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+.content .arrow2 {
+    width: 40%;
+    margin-bottom: 0.65rem;
+}
+
+.content .enrollBtn {
+    outline: none;
+    border: none;
+    padding: 0.7rem;
+    /* background: linear-gradient(#131010, #1A1313); */
+    background: linear-gradient(180deg, #8255D3 0%, #2C1518 100%);
+    width: 35%;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.content .closeSwiper {
+    outline: none;
+    border: none;
+    padding: 0.7rem;
+    /* background: linear-gradient(#131010, #1A1313); */
+    background: rgb(255, 0, 128);
+    width: 35%;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+main .circle2 {
+    width: 4rem;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+main .circle3 {
+    width: 5rem;
+    position: absolute;
+    left: 17%;
+    bottom: 2%;
+}
+
+main .circle4 {
+    width: 3rem;
+    position: absolute;
+    right: 17%;
+    bottom: 25%;
+}
+
+@media screen and (max-width : 1000px) {
+    main .robot .circle1 {
+        width: 85%;
+        transform: translateX(-2rem);
+    }
+
+    main .robot .robot__svg {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    main .robot .circle1 {
+        width: 90%;
+    }
+
+    main .robot .robot__svg {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    main .robot .circle1 {
+        width: 95%;
+    }
+
+    main .robot .robot__svg {
+        width: 100%;
+        transform: translate(-10rem, 0.75rem);
+    }
+}
+
+
+@media screen and (max-height : 575px) {
+    main {
+        padding-top: 25vh;
+    }
+
+    main .robot .circle1 {
+        transform: translateX(-2.75rem);
+    }
+
+    main .circle2 {
+        width: 4rem;
+        right: 5%;
+        top: 15%;
+    }
+
+    main .circle3 {
+        width: 4rem;
+        left: 10%;
+        bottom: -7%;
+    }
+
+    main .circle4 {
+        width: 2.5rem;
+        bottom: 10%;
+    }
+}
+
+
+
+/* ======================  swiper related code goes here ================== */
+
+.swiper {
+    height: 200px;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    display: none;
+    background: transparent;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    width: 150px;
+    height: 150px;
+    border-radius: 7px;
+
+
+    /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* designing swiper buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: whitesmoke;
+}
+
+/* designing swiper bullets at below  */
+.swiper-pagination-bullet {
+    background-color: red;
+    opacity: 1;
+}
+
+/* designing swiper bullets at below which is active  */
+.swiper-pagination-bullet-active {
+    /* background-color: #000; */
+    background-color: yellow;
+    opacity: 1;
+}
+
+.swiper-slide-active {
+    /*  if we do not provide centeredSlides : true, in script than we have to specify .swiper-slide-active + div 
+     type of things to select the centered element */
+    transform: scale(1.25);
+    transition: 1s ease;
+    z-index: 5;
+}
+
+
+/* ==========  designing for small devices goes here =====================================================
+=========================================================================================================*/
+
+@media screen and (max-width : 700px) {
+    header .logoContainer {
+        width: 30%;
+    }
+
+    header nav {
+        position: absolute;
+        right: -10%;
+        top: 0;
+        width: 35%;
+        height: 100dvh;
+        display: none;
+        overflow: auto;
+    }
+
+    header nav ul {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    header nav ul li {
+        margin-top: 2.25rem;
+    }
+
+    header nav .closeNav {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    header .logoContainer {
+        width: 40%;
+    }
+}
+
+
+
+@media screen and (max-width : 1000px) and (orientation : portrait) {
+    main {
+        display: none;
+    }
+
+    .smain {
+        width: 100%;
+        min-height: 100dvh;
+        /* padding-top: 10dvh; */
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        /* background: #131010; */
+    }
+
+    .smain .sroboAndName {
+        padding-top: 13.5dvh;
+        background: #131010;
+        border-radius: 0px 0px 35px 35px;
+    }
+
+    .smain .sroboAndName .srobot {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .smain .sroboAndName .srobot .scircle1 {
+        width: 45%;
+    }
+
+    .smain .sroboAndName .srobot .srobot__svg {
+        width: 45%;
+        transform: translate(-45%, 1rem);
+    }
+
+    .smain .sname {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .smain .iete {
+        width: fit-content;
+        font-size: 5rem;
+        letter-spacing: 0.3rem;
+        font-family: 'Bebas Neue', cursive;
+        color: rgba(255, 255, 255, 1);
+        border-bottom: 2px solid rgba(255, 255, 255, 1);
+    }
+
+    .smain .scontent {
+        width: 100%;
+        padding: 2rem;
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 1.15rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .smain .scontent p {
+        margin-bottom: 2rem;
+    }
+    .smain .senroll {
+        width: 35%;
+        padding: 0.65rem;
+        outline: none;
+        border: none;
+        align-self: center;
+        border-radius: 7px;
+        background: linear-gradient(180deg, #8255D3 0%, #2C1518 100%);
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+
+@media screen and (max-width : 550px) {
+    header nav{
+        width: 50%;
+    }
+    .smain .sroboAndName .srobot .scircle1 {
+        width: 55%;
+    }
+
+    .smain .sroboAndName .srobot .srobot__svg {
+        width: 55%;
+        transform: translate(-55%, 1rem);
+    }
+
+    .smain .iete {
+        font-size: 3rem;
+    }
+    .smain .scontent {
+        font-size: 1rem;
+    }
+}
